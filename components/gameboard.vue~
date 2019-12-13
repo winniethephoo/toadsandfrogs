@@ -1,0 +1,36 @@
+<template>
+  <div>
+    {{M+',' +N}}
+    <table border>
+      <tr>
+	<td v-for="(k,i) in board" @click="move">
+	  {{i}}
+	</td>	
+	</tr>
+      </table>
+    </div>
+</template>
+
+<script>
+export default{
+    props:['M','N','L'],//プロパティ：ボードの性質を定める
+    data(){
+	board:null
+	
+    },
+    created(){
+	for(let i=0;i<M;i++){
+	    board.push("T")
+	}
+	for(let i=0;i<L-M-N;i++){
+	    board.push(" ")
+	}
+	for(let i=0;i<N;i++){
+	    board.push("F")
+	}
+    },
+    methods:{
+	move(){alert("clicked")}
+    }
+}
+</script>

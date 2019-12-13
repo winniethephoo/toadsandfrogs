@@ -1,0 +1,22 @@
+<template>
+  <section class="section">
+    <div class="columns is-mobile">   
+      <gameboard>
+	
+	  </gameboard>
+    
+    </div>
+  </section>
+</template>
+
+<script>
+import gameboard from '~/components/gameboard'
+export default {
+  name: 'HomePage',
+
+  components: {
+      gameboard
+      
+  }
+}
+</script>
