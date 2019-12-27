@@ -2,8 +2,7 @@
   <section class="section">
     <div class="columns is-mobile">   
       <gameboard M=2 N=3 L=7>
-	
-	
+		
 	  </gameboard>
     
     </div>

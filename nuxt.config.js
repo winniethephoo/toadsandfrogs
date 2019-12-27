@@ -22,12 +22,13 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
+    css: [
+	'@/assets/table.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
+  plugins: ['~/plugins/firebase'
   ],
   /*
   ** Nuxt.js dev-modules

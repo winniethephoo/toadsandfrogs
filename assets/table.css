@@ -1,0 +1,13 @@
+td {
+    width:50px;
+    text-align:center;
+    }
+td.toad{
+    background:blue;
+    color:yellow;
+		   
+}
+td.frog{
+    background:green;
+    color:yellow;
+}
