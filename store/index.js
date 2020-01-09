@@ -3,7 +3,8 @@ import Vuex from 'vuex'
 import { vuexfireMutations, firestoreAction } from 'vuexfire'
 
 export const state = () =>({
-    games:[],
+    games:[],//特定されてないboard
+    thegame:null,//特定のidのboard
 });
 
 export const mutations = {
@@ -14,11 +15,16 @@ export const actions = {
     setGamesRef: firestoreAction(function(context,ref){
 	context.bindFirestoreRef('games', ref)
 	//gemesという変数にcollectionをbind:データベースに表示
+    }),
+    setTheGameRef: firestoreAction(function(context,ref){
+	context.bindFirestoreRef('thegame', ref)
+	//thegemesという変数にfirebase上のドキュメントを参照させる（同期させる）
     })
 };
 
 export const getters = {
-    games: state => state.games
+    games: state => state.games,
+    thegame: state => state.thegame
 }
 
 
